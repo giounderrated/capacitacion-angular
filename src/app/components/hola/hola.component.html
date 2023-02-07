@@ -1,12 +1,17 @@
 <div>
-    <h1 class="text-black">
-        Mi nombre es Giovani
+    <h1>
+        Este es el componente hola
     </h1>
-
-    <div>
-        <h1>
-            Este es el componente hola
+    <div class="bg-red-700">
+        <h1 class="text-lg text-white">
+            Lista de Productos
         </h1>
     </div>
-
+    <div *ngFor="let product of products" class="bg-red-200 p-5">
+        <li class="text-slate-900"> {{product.title}} </li>
+        <!-- <img [src]="product.image" > -->
+        <p>
+            {{product.description}}
+        </p>
+    </div>
 </div>
