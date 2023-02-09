@@ -1,0 +1,26 @@
+<div class="bg-slate-900">
+    <form class="text-white" [formGroup]="loginForm" (ngSubmit)="save()" >
+        <input type="email" formControlName="email" placeholder="email" class="text-slate-900">
+
+        <div class="text-red-500" *ngIf="email?.invalid && (email?.dirty || email?.touched)">
+            <div *ngIf="email?.errors?.['email']">
+                Tu email es inválido
+            </div>
+        </div>
+
+        <input type="password" formControlName="password" placeholder="password" class="text-slate-900">
+
+        <div class="text-red-500" *ngIf="password?.invalid && (password?.dirty || password?.touched)">
+            <div *ngIf="password?.errors?.['required']">
+                Necesitas ingresar una contraseña
+            </div>
+            <div *ngIf="password?.errors?.['minlength']">
+                Tu contraseña debe ser de al menos 8 caracteres.
+            </div>
+        </div>
+
+        <button>
+            Enviar
+        </button>
+    </form>
+</div>
