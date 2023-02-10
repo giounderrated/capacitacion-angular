@@ -2,13 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from 'src/app/core/services/product.service';
 
 @Component({
-  selector: 'app-hola',
-  templateUrl: './hola.component.html',
-  styleUrls: ['./hola.component.scss']
+  selector: 'app-product-list',
+  templateUrl: './product-list.component.html',
+  styleUrls: ['./product-list.component.scss']
 })
-export class HolaComponent implements OnInit{
-  
- products:any[] = [];
+export class ProductListComponent implements OnInit{
+
+  products:any[] = [];
 
   constructor(private productService:ProductService){
 
@@ -23,7 +23,6 @@ export class HolaComponent implements OnInit{
       console.log(data);
     });
   }
-
 
 
 }

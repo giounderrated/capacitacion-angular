@@ -7,9 +7,7 @@
                 Tu email es inválido
             </div>
         </div>
-
         <input type="password" formControlName="password" placeholder="password" class="text-slate-900">
-
         <div class="text-red-500" *ngIf="password?.invalid && (password?.dirty || password?.touched)">
             <div *ngIf="password?.errors?.['required']">
                 Necesitas ingresar una contraseña
@@ -18,7 +16,6 @@
                 Tu contraseña debe ser de al menos 8 caracteres.
             </div>
         </div>
-
         <button>
             Enviar
         </button>

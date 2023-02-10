@@ -20,8 +20,6 @@ export class LoginComponent {
     if(!this.loginForm.valid) return;
     console.log(this.loginForm.value)
     let data = JSON.stringify(this.loginForm.value)
-    console.log(data);
-    
   }
 
   get email(){

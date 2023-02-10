@@ -1,0 +1,13 @@
+<div>
+    <h1>
+        Este es el componente Padre
+    </h1>
+    <div>
+        <h1 class="text-lg">
+            Lista de Productos
+        </h1>
+    </div>
+    <div *ngFor="let product of products" class="flex flex-wrap">
+        <app-product-card [product]="product" ></app-product-card>
+    </div>
+</div>
