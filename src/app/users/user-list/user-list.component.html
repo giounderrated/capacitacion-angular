@@ -1,0 +1,37 @@
+<div *ngFor="let user of users" class="flex space-x-5">
+    <h1 class="text-red-500">
+        {{user.id}}
+    </h1>
+    <h1 class="text-teal-500">
+        {{user.name}}
+    </h1>
+    <h2>
+        {{user.role}}   
+    </h2>
+    <button class="bg-red-500 shadow-sm rounded-md" (click)="deleteUser(user.id)" >
+        Eliminar
+    </button>
+
+    <button class="bg-teal-500 shadow-sm rounded-md ">
+        Agregar Usuario
+    </button>
+</div>
+
+<div class="mt-10 bg-cyan-300 p-4" >
+    <form [formGroup]="createUserForm"
+    (ngSubmit)="addUser()"> 
+        <input type="text" placeholder="Escribe el nombre" formControlName="name">
+        <input type="number" placeholder="Digita la edad"
+        formControlName="age"
+        >
+        <select formControlName="role">
+            <option value="-1" selected>Elige Rol</option>
+            <option value="ROLE_USER">Usuario</option>
+            <option value="ROLE_ADMIN">Admin</option>
+        </select>
+        <button class="bg-teal-500 shadow-sm rounded-md">
+            Agregar Usuario
+        </button>
+    </form>
+
+</div>

@@ -9,6 +9,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ProductComponent } from './components/product/product.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
+import { UserListComponent } from './users/user-list/user-list.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,6 +18,7 @@ import { ProductListComponent } from './components/product-list/product-list.com
     ProductComponent,
     ProductCardComponent,
     ProductListComponent,
+    UserListComponent,
   ],
   imports: [
     BrowserModule,

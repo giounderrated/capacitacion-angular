@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
-  
+  myName:string = "Giovani";
+  n:number = 0;
+
+  add(){
+    this.n++;
+  }
+
 }
